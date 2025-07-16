@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            padding-top: 30px;
+            color: #2a9d8f;
+        }
+
+        .form {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fefefe;
+            transition: border 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #2a9d8f;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 40%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #2a9d8f;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #21867a;
+        }
+
+        @media (max-width: 640px) {
+            form {
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Diabetes Risk Prediction</h1>
+
+<div class="form">
+    <label for="prg">Pregnancies</label>
+    <input type="number" step="any" name="prg" id="prg" required>
+
+    <label for="glc">Glucose</label>
+    <input type="number" step="any" name="glc" id="glc" required>
+
+    <label for="bp">Blood Pressure</label>
+    <input type="number" step="any" name="bp" id="bp" required>
+
+    <label for="st">Skin Thickness</label>
+    <input type="number" step="any" name="st" id="st" required>
+
+    <label for="insulin">Insulin</label>
+    <input type="number" step="any" name="insulin" id="insulin" required>
+
+    <label for="bmi">BMI</label>
+    <input type="number" step="any" name="bmi" id="bmi" required>
+
+    <label for="Dpf">Diabetes Pedigree Function</label>
+    <input type="number" step="any" name="Dpf" id="Dpf" required>
+
+    <label for="age">Age</label>
+    <input type="number" step="any" name="age" id="age" required>
+
+    <div class="btn">
+        <button onclick="predictDiabetes()">Predict</button>
+    </div>
+
+    <div id="result" style="margin-top: 20px;"></div>
+</div>
+
+</body>
+</html>
